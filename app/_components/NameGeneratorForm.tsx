@@ -34,6 +34,7 @@ function NameGeneratorForm() {
     event.preventDefault();
 
     setSelectedName("");
+    setNameOptions([""]);
     handleSubmit(event);
     setDisableSubmitButton(true);
   }
@@ -80,7 +81,7 @@ function NameGeneratorForm() {
       >
         Generate names
       </SubmitButton>
-      {error && <p className="text-red-500">{error}</p>}
+      {error && <p className="w-full text-red-500">{error}</p>}
     </form>
   );
 }

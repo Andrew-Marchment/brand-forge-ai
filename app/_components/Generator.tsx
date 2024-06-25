@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { useGenerator } from "./GeneratorContext";
 import ResponseContainer from "./ResponseContainer";
 import ImageContainer from "./ImageContainer";
@@ -17,7 +16,7 @@ function Generator() {
     <>
       <div className="mb-8 rounded-[--radius] p-5 text-start text-card-foreground shadow-lg dark:border dark:border-border sm:mx-3 sm:mb-4">
         {!selectedNameConfirmed && (
-          <div className="mb-3 flex gap-2">
+          <div className="mb-3 flex items-center gap-2">
             <input
               className="accent-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               type="checkbox"

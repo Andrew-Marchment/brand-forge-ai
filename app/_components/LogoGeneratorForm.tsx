@@ -45,7 +45,7 @@ Company Description: Provide a brief description of what the company does.
 Logo Style: Specify the style of the logo (modern, vintage, minimalist, etc.).
 Colors: Mention any specific colors you want to be included.
 Elements: Include any symbols, icons, or elements that should be part of the logo.
-Text: Indicate if the logo should include the company name or any tagline or no text.
+Text: Indicate that the logo should not include any text.
 Tone and Feeling: Describe the tone or feeling you want the logo to convey (professional, playful, elegant, etc.). The company name is "${companyName}", the company description is "${companyDescription}" and the logo style is "${
         logoStyle === "any"
           ? "whichever fits best from the following list of style options: minimalist, vintage, modern, hand-drawn, flat, mascot, emblem, abstract, or geometric"
@@ -84,7 +84,7 @@ Tone and Feeling: Describe the tone or feeling you want the logo to convey (prof
           : "1. Give us the name of your company."}
       </label>
       <input
-        className="mb-3 w-full rounded-[--radius] border border-input bg-card p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:bg-muted/50 disabled:text-muted-foreground/50 sm:text-sm"
+        className="mb-3 w-full rounded-[--radius] border border-input bg-card p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:bg-muted/50 disabled:text-muted-foreground sm:text-sm"
         id="companyName"
         placeholder="Feline Fury eSports"
         value={companyName}
@@ -102,7 +102,7 @@ Tone and Feeling: Describe the tone or feeling you want the logo to convey (prof
           : "(Optional) Give us some information about your company."}
       </label>
       <textarea
-        className="mb-3 w-full resize-none rounded-[--radius] border border-input bg-card p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:bg-muted/50 disabled:text-muted-foreground/50 sm:text-sm"
+        className="mb-3 w-full resize-none rounded-[--radius] border border-input bg-card p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:bg-muted/50 disabled:text-muted-foreground sm:text-sm"
         id="infoInput"
         rows={4}
         placeholder="A League of Legends eSports team with a cute cat theme"
@@ -147,7 +147,7 @@ Tone and Feeling: Describe the tone or feeling you want the logo to convey (prof
       >
         Generate Logo
       </SubmitButton>
-      {error && <p className="text-red-500">{error}</p>}
+      {error && <p className="w-full text-red-500">{error}</p>}
     </form>
   );
 }
