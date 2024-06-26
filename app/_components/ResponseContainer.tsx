@@ -66,13 +66,13 @@ const ResponseContainer = (): ReactElement => {
           className="flex items-center gap-2 rounded-[--radius] bg-secondary px-3 py-2 text-secondary-foreground transition-all duration-300 hover:bg-secondary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:bg-secondary/50 disabled:text-secondary-foreground/50"
           onClick={() => {
             setSelectedName("");
-            const currNameOptions = [...oldNameOptions, ...nameOptions];
-            setOldNameOptions(currNameOptions);
+            const allNameOptions = [...oldNameOptions, ...nameOptions];
+            setOldNameOptions(allNameOptions);
             append({
               role: "system",
-              content: `Create an unordered list of four company name ideas, separated by commas with no dash at the start, based on the following company description: ${companyDescription}. Do not use any of the following names:${currNameOptions.map(
+              content: `Act as a marketing expert to critique the following names:${nameOptions.map(
                 (name) => ` ${name}`,
-              )}`,
+              )}. Do not include the critiques in your response but use the information gained from the critiques to create an unordered list of four company name ideas, separated by commas with no dashes, based on the following company description: ${companyDescription}. Do not use any of the following names: ${allNameOptions}.`,
             });
           }}
           disabled={isLoading}
