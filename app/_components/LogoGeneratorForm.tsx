@@ -26,8 +26,7 @@ function LogoGeneratorForm() {
     api: "/api/gpt",
     onFinish: (message) => {
       setError("");
-      console.log(message.content);
-      // getImageData(message.content).then();
+      getImageData(message.content).then();
 
       // store image prompt for development sake
       setImagePrompt(message.content);
